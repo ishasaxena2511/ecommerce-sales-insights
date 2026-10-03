@@ -1,0 +1,356 @@
+// ================================================================================
+// POWER BI DAX MEASURES LIBRARY — E-COMMERCE BUSINESS INTELLIGENCE PLATFORM
+// ================================================================================
+// Author: Antigravity BI Engineering
+// Architecture: Kimball Star Schema (fact_orders linked to dim_date, dim_customer,
+//               dim_product, dim_geography)
+// Standard: Financial and revenue metrics compute strictly over Completed Orders
+//           (Delivery Status IN {"Delivered", "Delayed"}).
+// ================================================================================
+
+
+// --------------------------------------------------------------------------------
+// 1. CORE REVENUE & PROFITABILITY MEASURES (COMPLETED ORDERS ONLY)
+// --------------------------------------------------------------------------------
+
+/*
+    Measure: Total Sales
+    Description:
+        Aggregates realized net revenue strictly for completed orders (Delivered or Delayed).
+        Excludes Cancelled and Returned orders as per corporate accounting principles.
+    Format: Currency (₹#,##0.00)
+*/
+Total Sales = 
+CALCULATE(
+    SUM(fact_orders[sales_amount]),
+    fact_orders[delivery_status] IN {"Delivered", "Delayed"}
+)
+
+
+/*
+    Measure: Total Profit
+    Description:
+        Aggregates realized net profit (Sales Amount - Cost Amount) strictly for
+        completed orders. Reflects true bottom-line earnings.
+    Format: Currency (₹#,##0.00)
+*/
+Total Profit = 
+CALCULATE(
+    SUM(fact_orders[profit_amount]),
+    fact_orders[delivery_status] IN {"Delivered", "Delayed"}
+)
+
+
+/*
+    Measure: Profit Margin %
+    Description:
+        Calculates the company-wide blended gross profit margin percentage.
+        Uses DIVIDE to safeguard against division by zero in zero-revenue filter slices.
+    Format: Percentage (0.0%)
+*/
+Profit Margin % = 
+DIVIDE(
+    [Total Profit],
+    [Total Sales],
+    0.0
+)
+
+
+/*
+    Measure: Total Orders
+    Description:
+        Distinct count of completed customer orders (Delivered or Delayed).
+        Acts as the primary transactional denominator for operational ratios.
+    Format: Whole Number (#,##0)
+*/
+Total Orders = 
+CALCULATE(
+    DISTINCTCOUNT(fact_orders[order_id]),
+    fact_orders[delivery_status] IN {"Delivered", "Delayed"}
+)
+
+
+/*
+    Measure: Total Orders Placed (All Statuses)
+    Description:
+        Distinct count of all orders initiated in the system, encompassing Completed,
+        Returned, and Cancelled orders. Used for funnel and operational loss rates.
+    Format: Whole Number (#,##0)
+*/
+Total Orders Placed = 
+DISTINCTCOUNT(fact_orders[order_id])
+
+
+/*
+    Measure: AOV (Average Order Value)
+    Description:
+        Average realized ticket size per completed transaction.
+        Evaluates customer purchasing power and upsell effectiveness.
+    Format: Currency (₹#,##0.00)
+*/
+AOV = 
+DIVIDE(
+    [Total Sales],
+    [Total Orders],
+    0.0
+)
+
+
+/*
+    Measure: Total Units Sold
+    Description:
+        Sum of physical item units purchased across all completed orders.
+    Format: Whole Number (#,##0)
+*/
+Total Units Sold = 
+CALCULATE(
+    SUM(fact_orders[quantity_sold]),
+    fact_orders[delivery_status] IN {"Delivered", "Delayed"}
+)
+
+
+// --------------------------------------------------------------------------------
+// 2. TIME INTELLIGENCE MEASURES (MoM & YoY)
+// Requires: Active 1:* relationship between dim_date[date] and fact_orders[order_date]
+// --------------------------------------------------------------------------------
+
+/*
+    Measure: Sales Prior Month
+    Description:
+        Computes Total Sales for the prior calendar month using DATEADD.
+    Format: Currency (₹#,##0.00)
+*/
+Sales Prior Month = 
+CALCULATE(
+    [Total Sales],
+    DATEADD(dim_date[date], -1, MONTH)
+)
+
+
+/*
+    Measure: Sales MoM Growth %
+    Description:
+        Month-over-Month percentage revenue growth rate using DATEADD.
+        Returns BLANK() if the prior month has zero or non-existent sales.
+    Format: Percentage (+0.0%;-0.0%;0.0%)
+*/
+Sales MoM Growth % = 
+VAR CurrentSales = [Total Sales]
+VAR PriorMonthSales = [Sales Prior Month]
+RETURN
+    IF(
+        NOT ISBLANK(PriorMonthSales) && PriorMonthSales > 0,
+        DIVIDE(CurrentSales - PriorMonthSales, PriorMonthSales, BLANK()),
+        BLANK()
+    )
+
+
+/*
+    Measure: Sales Prior Year
+    Description:
+        Computes Total Sales for the identical period in the prior year using
+        SAMEPERIODLASTYEAR across the continuous calendar dimension.
+    Format: Currency (₹#,##0.00)
+*/
+Sales Prior Year = 
+CALCULATE(
+    [Total Sales],
+    SAMEPERIODLASTYEAR(dim_date[date])
+)
+
+
+/*
+    Measure: Sales YoY Growth %
+    Description:
+        Year-over-Year percentage revenue growth benchmarked against the identical
+        historical period 365 days prior.
+    Format: Percentage (+0.0%;-0.0%;0.0%)
+*/
+Sales YoY Growth % = 
+VAR CurrentSales = [Total Sales]
+VAR PriorYearSales = [Sales Prior Year]
+RETURN
+    IF(
+        NOT ISBLANK(PriorYearSales) && PriorYearSales > 0,
+        DIVIDE(CurrentSales - PriorYearSales, PriorYearSales, BLANK()),
+        BLANK()
+    )
+
+
+// --------------------------------------------------------------------------------
+// 3. PARETO & PORTFOLIO CONTRIBUTION MEASURES (ALLSELECTED)
+// --------------------------------------------------------------------------------
+
+/*
+    Measure: Customer Contribution %
+    Description:
+        Computes an individual customer's revenue share relative to the total sales
+        of all currently selected/filtered customers. Essential for Pareto 80/20 curves.
+    Format: Percentage (0.00%)
+*/
+Customer Contribution % = 
+VAR EntitySales = [Total Sales]
+VAR TotalCustomerPoolSales = 
+    CALCULATE(
+        [Total Sales],
+        ALLSELECTED(dim_customer)
+    )
+RETURN
+    DIVIDE(EntitySales, TotalCustomerPoolSales, 0.0)
+
+
+/*
+    Measure: Product Contribution %
+    Description:
+        Computes a specific SKU's revenue share against the entire active portfolio
+        or selected category filter slice using ALLSELECTED.
+    Format: Percentage (0.00%)
+*/
+Product Contribution % = 
+VAR EntitySales = [Total Sales]
+VAR TotalProductPoolSales = 
+    CALCULATE(
+        [Total Sales],
+        ALLSELECTED(dim_product)
+    )
+RETURN
+    DIVIDE(EntitySales, TotalProductPoolSales, 0.0)
+
+
+/*
+    Measure: Category Contribution %
+    Description:
+        Computes a category's share of total portfolio revenue.
+    Format: Percentage (0.0%)
+*/
+Category Contribution % = 
+VAR CatSales = [Total Sales]
+VAR TotalSalesAllCategories = 
+    CALCULATE(
+        [Total Sales],
+        ALLSELECTED(dim_product[product_category])
+    )
+RETURN
+    DIVIDE(CatSales, TotalSalesAllCategories, 0.0)
+
+
+// --------------------------------------------------------------------------------
+// 4. OPERATIONAL, DELIVERY SLA & RISK RATIOS
+// --------------------------------------------------------------------------------
+
+/*
+    Measure: On-time Delivery %
+    Description:
+        Measures fulfillment SLA reliability: count of on-time Delivered orders
+        divided by all completed shipments (Delivered + Delayed).
+    Format: Percentage (0.0%)
+*/
+On-time Delivery % = 
+VAR DeliveredOrders = 
+    CALCULATE(
+        DISTINCTCOUNT(fact_orders[order_id]),
+        fact_orders[delivery_status] = "Delivered"
+    )
+VAR CompletedOrders = [Total Orders]
+RETURN
+    DIVIDE(DeliveredOrders, CompletedOrders, 0.0)
+
+
+/*
+    Measure: Return Rate
+    Description:
+        Percentage of all booked orders that resulted in a customer return.
+        Indicates product dissatisfaction, defects, or sizing mismatches.
+    Format: Percentage (0.0%)
+*/
+Return Rate = 
+VAR ReturnedOrders = 
+    CALCULATE(
+        DISTINCTCOUNT(fact_orders[order_id]),
+        fact_orders[delivery_status] = "Returned"
+    )
+VAR AllOrders = [Total Orders Placed]
+RETURN
+    DIVIDE(ReturnedOrders, AllOrders, 0.0)
+
+
+/*
+    Measure: Cancellation Rate
+    Description:
+        Percentage of all booked orders cancelled prior to or during delivery.
+    Format: Percentage (0.0%)
+*/
+Cancellation Rate = 
+VAR CancelledOrders = 
+    CALCULATE(
+        DISTINCTCOUNT(fact_orders[order_id]),
+        fact_orders[delivery_status] = "Cancelled"
+    )
+VAR AllOrders = [Total Orders Placed]
+RETURN
+    DIVIDE(CancelledOrders, AllOrders, 0.0)
+
+
+/*
+    Measure: UPI Share %
+    Description:
+        Percentage of completed transactions settled via United Payments Interface (UPI).
+        Tracks adoption of India's dominant instant digital payment protocol.
+    Format: Percentage (0.0%)
+*/
+UPI Share % = 
+VAR UPIOrders = 
+    CALCULATE(
+        DISTINCTCOUNT(fact_orders[order_id]),
+        fact_orders[payment_method] = "UPI",
+        fact_orders[delivery_status] IN {"Delivered", "Delayed"}
+    )
+VAR TotalCompleted = [Total Orders]
+RETURN
+    DIVIDE(UPIOrders, TotalCompleted, 0.0)
+
+
+/*
+    Measure: Digital Payment Share %
+    Description:
+        Aggregates all prepaid/digital payment modalities (UPI, Credit Card, Debit Card,
+        Net Banking, Wallet) as a percentage of total orders placed.
+    Format: Percentage (0.0%)
+*/
+Digital Payment Share % = 
+VAR DigitalOrders = 
+    CALCULATE(
+        DISTINCTCOUNT(fact_orders[order_id]),
+        fact_orders[payment_method] IN {"UPI", "Credit Card", "Debit Card", "Net Banking", "Wallet"}
+    )
+VAR AllOrders = [Total Orders Placed]
+RETURN
+    DIVIDE(DigitalOrders, AllOrders, 0.0)
+
+
+/*
+    Measure: Loss Making Orders Count
+    Description:
+        Count of completed transactions where net profit is negative (Cost > Sales).
+    Format: Whole Number (#,##0)
+*/
+Loss Making Orders Count = 
+CALCULATE(
+    DISTINCTCOUNT(fact_orders[order_id]),
+    fact_orders[profit_amount] < 0,
+    fact_orders[delivery_status] IN {"Delivered", "Delayed"}
+)
+
+
+/*
+    Measure: Total Realized Loss Amount
+    Description:
+        Absolute dollar/rupee amount of net losses incurred on loss-making orders.
+    Format: Currency (₹#,##0.00)
+*/
+Total Realized Loss Amount = 
+CALCULATE(
+    ABS(SUM(fact_orders[profit_amount])),
+    fact_orders[profit_amount] < 0,
+    fact_orders[delivery_status] IN {"Delivered", "Delayed"}
+)

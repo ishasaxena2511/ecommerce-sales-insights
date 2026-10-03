@@ -1,0 +1,57 @@
+City,State,Region,Latitude,Longitude
+New Delhi,Delhi,North,28.6139,77.209
+Delhi,Delhi,North,28.7041,77.1025
+Noida,Uttar Pradesh,North,28.5355,77.391
+Lucknow,Uttar Pradesh,North,26.8467,80.9462
+Kanpur,Uttar Pradesh,North,26.4499,80.3319
+Jaipur,Rajasthan,North,26.9124,75.7873
+Jodhpur,Rajasthan,North,26.2389,73.0243
+Udaipur,Rajasthan,North,24.5854,73.7125
+Chandigarh,Punjab,North,30.7333,76.7794
+Ludhiana,Punjab,North,30.901,75.8573
+Amritsar,Punjab,North,31.634,74.8723
+Gurugram,Haryana,North,28.4595,77.0266
+Faridabad,Haryana,North,28.4089,77.3178
+Bengaluru,Karnataka,South,12.9716,77.5946
+Mysuru,Karnataka,South,12.2958,76.6394
+Mangaluru,Karnataka,South,12.9141,74.856
+Chennai,Tamil Nadu,South,13.0827,80.2707
+Coimbatore,Tamil Nadu,South,11.0168,76.9558
+Madurai,Tamil Nadu,South,9.9252,78.1198
+Hyderabad,Telangana,South,17.385,78.4867
+Warangal,Telangana,South,17.9689,79.5941
+Kochi,Kerala,South,9.9312,76.2673
+Thiruvananthapuram,Kerala,South,8.5241,76.9366
+Kozhikode,Kerala,South,11.2588,75.7804
+Visakhapatnam,Andhra Pradesh,South,17.6868,83.2185
+Vijayawada,Andhra Pradesh,South,16.5062,80.648
+Kolkata,West Bengal,East,22.5726,88.3639
+Howrah,West Bengal,East,22.5958,88.2636
+Siliguri,West Bengal,East,26.7271,88.3953
+Bhubaneswar,Odisha,East,20.2961,85.8245
+Cuttack,Odisha,East,20.4625,85.8828
+Rourkela,Odisha,East,22.2604,84.8536
+Patna,Bihar,East,25.5941,85.1376
+Gaya,Bihar,East,24.7914,85.0002
+Muzaffarpur,Bihar,East,26.1209,85.3647
+Guwahati,Assam,East,26.1445,91.7362
+Silchar,Assam,East,24.8333,92.7789
+Ranchi,Jharkhand,East,23.3441,85.3096
+Jamshedpur,Jharkhand,East,22.8046,86.2029
+Mumbai,Maharashtra,West,19.076,72.8777
+Pune,Maharashtra,West,18.5204,73.8567
+Nagpur,Maharashtra,West,21.1458,79.0882
+Nashik,Maharashtra,West,19.9975,73.7898
+Ahmedabad,Gujarat,West,23.0225,72.5714
+Surat,Gujarat,West,21.1702,72.8311
+Vadodara,Gujarat,West,22.3072,73.1812
+Rajkot,Gujarat,West,22.3039,70.8022
+Panaji,Goa,West,15.4909,73.8278
+Margao,Goa,West,15.2832,73.9862
+Bhopal,Madhya Pradesh,Central,23.2599,77.4126
+Indore,Madhya Pradesh,Central,22.7196,75.8577
+Gwalior,Madhya Pradesh,Central,26.2183,78.1828
+Jabalpur,Madhya Pradesh,Central,23.1815,79.9864
+Raipur,Chhattisgarh,Central,21.2514,81.6296
+Bilaspur,Chhattisgarh,Central,22.0797,82.1409
+Durg,Chhattisgarh,Central,21.1904,81.2849

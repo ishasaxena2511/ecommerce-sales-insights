@@ -1,0 +1,101 @@
+{
+  "name": "E-Commerce Sales Insights Theme",
+  "dataColors": [
+    "#0B2545",
+    "#1B998B",
+    "#13315C",
+    "#F4A261",
+    "#E63946",
+    "#3A86FF",
+    "#8338EC",
+    "#2EC4B6"
+  ],
+  "background": "#F5F7FA",
+  "foreground": "#0B2545",
+  "tableAccent": "#1B998B",
+  "good": "#1B998B",
+  "neutral": "#F4A261",
+  "bad": "#E63946",
+  "maximum": "#0B2545",
+  "center": "#F4A261",
+  "minimum": "#E63946",
+  "null": "#CBD5E1",
+  "textClasses": {
+    "callout": {
+      "fontSize": 26,
+      "fontFace": "Segoe UI Semibold",
+      "color": "#0B2545"
+    },
+    "title": {
+      "fontSize": 13,
+      "fontFace": "Segoe UI Semibold",
+      "color": "#0B2545"
+    },
+    "header": {
+      "fontSize": 11,
+      "fontFace": "Segoe UI Semibold",
+      "color": "#13315C"
+    },
+    "label": {
+      "fontSize": 9,
+      "fontFace": "Segoe UI",
+      "color": "#64748B"
+    }
+  },
+  "visualStyles": {
+    "*": {
+      "*": {
+        "outspacePane": [
+          {
+            "backgroundColor": { "solid": { "color": "#F5F7FA" } },
+            "foregroundColor": { "solid": { "color": "#0B2545" } }
+          }
+        ],
+        "visualContainer": [
+          {
+            "backgroundColor": { "solid": { "color": "#FFFFFF" } },
+            "border": true,
+            "borderColor": { "solid": { "color": "#E2E8F0" } },
+            "borderWidth": 1,
+            "borderRadius": 8,
+            "dropShadow": {
+              "show": true,
+              "color": { "solid": { "color": "#0B2545" } },
+              "transparency": 94,
+              "position": "Outer",
+              "preset": "BottomRight"
+            }
+          }
+        ]
+      }
+    },
+    "page": {
+      "*": {
+        "background": [
+          {
+            "color": { "solid": { "color": "#F5F7FA" } },
+            "transparency": 0
+          }
+        ]
+      }
+    },
+    "card": {
+      "*": {
+        "labels": [
+          {
+            "color": { "solid": { "color": "#0B2545" } },
+            "fontSize": 24,
+            "fontFamily": "Segoe UI Semibold"
+          }
+        ],
+        "categoryLabels": [
+          {
+            "color": { "solid": { "color": "#64748B" } },
+            "fontSize": 10,
+            "fontFamily": "Segoe UI"
+          }
+        ]
+      }
+    }
+  }
+}

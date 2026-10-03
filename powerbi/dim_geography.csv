@@ -1,0 +1,57 @@
+geography_key,city,state,region,latitude,longitude
+1,Bilaspur,Chhattisgarh,Central,22.0797,82.1409
+2,Durg,Chhattisgarh,Central,21.1904,81.2849
+3,Raipur,Chhattisgarh,Central,21.2514,81.6296
+4,Bhopal,Madhya Pradesh,Central,23.2599,77.4126
+5,Gwalior,Madhya Pradesh,Central,26.2183,78.1828
+6,Indore,Madhya Pradesh,Central,22.7196,75.8577
+7,Jabalpur,Madhya Pradesh,Central,23.1815,79.9864
+8,Guwahati,Assam,East,26.1445,91.7362
+9,Silchar,Assam,East,24.8333,92.7789
+10,Gaya,Bihar,East,24.7914,85.0002
+11,Muzaffarpur,Bihar,East,26.1209,85.3647
+12,Patna,Bihar,East,25.5941,85.1376
+13,Jamshedpur,Jharkhand,East,22.8046,86.2029
+14,Ranchi,Jharkhand,East,23.3441,85.3096
+15,Bhubaneswar,Odisha,East,20.2961,85.8245
+16,Cuttack,Odisha,East,20.4625,85.8828
+17,Rourkela,Odisha,East,22.2604,84.8536
+18,Howrah,West Bengal,East,22.5958,88.2636
+19,Kolkata,West Bengal,East,22.5726,88.3639
+20,Siliguri,West Bengal,East,26.7271,88.3953
+21,Delhi,Delhi,North,28.7041,77.1025
+22,New Delhi,Delhi,North,28.6139,77.209
+23,Faridabad,Haryana,North,28.4089,77.3178
+24,Gurugram,Haryana,North,28.4595,77.0266
+25,Amritsar,Punjab,North,31.634,74.8723
+26,Chandigarh,Punjab,North,30.7333,76.7794
+27,Ludhiana,Punjab,North,30.901,75.8573
+28,Jaipur,Rajasthan,North,26.9124,75.7873
+29,Jodhpur,Rajasthan,North,26.2389,73.0243
+30,Udaipur,Rajasthan,North,24.5854,73.7125
+31,Kanpur,Uttar Pradesh,North,26.4499,80.3319
+32,Lucknow,Uttar Pradesh,North,26.8467,80.9462
+33,Noida,Uttar Pradesh,North,28.5355,77.391
+34,Vijayawada,Andhra Pradesh,South,16.5062,80.648
+35,Visakhapatnam,Andhra Pradesh,South,17.6868,83.2185
+36,Bengaluru,Karnataka,South,12.9716,77.5946
+37,Mangaluru,Karnataka,South,12.9141,74.856
+38,Mysuru,Karnataka,South,12.2958,76.6394
+39,Kochi,Kerala,South,9.9312,76.2673
+40,Kozhikode,Kerala,South,11.2588,75.7804
+41,Thiruvananthapuram,Kerala,South,8.5241,76.9366
+42,Chennai,Tamil Nadu,South,13.0827,80.2707
+43,Coimbatore,Tamil Nadu,South,11.0168,76.9558
+44,Madurai,Tamil Nadu,South,9.9252,78.1198
+45,Hyderabad,Telangana,South,17.385,78.4867
+46,Warangal,Telangana,South,17.9689,79.5941
+47,Margao,Goa,West,15.2832,73.9862
+48,Panaji,Goa,West,15.4909,73.8278
+49,Ahmedabad,Gujarat,West,23.0225,72.5714
+50,Rajkot,Gujarat,West,22.3039,70.8022
+51,Surat,Gujarat,West,21.1702,72.8311
+52,Vadodara,Gujarat,West,22.3072,73.1812
+53,Mumbai,Maharashtra,West,19.076,72.8777
+54,Nagpur,Maharashtra,West,21.1458,79.0882
+55,Nashik,Maharashtra,West,19.9975,73.7898
+56,Pune,Maharashtra,West,18.5204,73.8567

@@ -1,0 +1,300 @@
+customer_key,customer_id,customer_name,customer_segment
+1,CUST-0001,Akash Gupta,Consumer
+2,CUST-0002,Jyoti Reddy,Home Office
+3,CUST-0003,Siddharth Verma,Corporate
+4,CUST-0004,Rahul Malhotra,Consumer
+5,CUST-0005,Harsh Iyer,Consumer
+6,CUST-0006,Deepa Patel,Consumer
+7,CUST-0007,Neha Nair,Consumer
+8,CUST-0008,Alok Agarwal,Home Office
+9,CUST-0009,Prerna Nair,Corporate
+10,CUST-0010,Komal Deshmukh,Corporate
+11,CUST-0011,Karthik Chatterjee,Consumer
+12,CUST-0012,Pallavi Reddy,Home Office
+13,CUST-0013,Aarav Choudhury,Corporate
+14,CUST-0014,Aditya Deshmukh,Consumer
+15,CUST-0015,Swati Reddy,Consumer
+16,CUST-0016,Ishita Choudhury,Consumer
+17,CUST-0017,Rahul Iyer,Consumer
+18,CUST-0018,Rahul Kumar,Consumer
+19,CUST-0019,Gaurav Agarwal,Consumer
+20,CUST-0020,Rohan Nambiar,Consumer
+21,CUST-0021,Harsh Gupta,Corporate
+22,CUST-0022,Neha Sen,Consumer
+23,CUST-0023,Akash Agarwal,Consumer
+24,CUST-0024,Tanvi Pillai,Consumer
+25,CUST-0025,Preeti Iyer,Consumer
+26,CUST-0026,Mayank Chatterjee,Corporate
+27,CUST-0027,Amit Iyer,Consumer
+28,CUST-0028,Siddharth Menon,Consumer
+29,CUST-0029,Varun Reddy,Consumer
+30,CUST-0030,Akash Saxena,Consumer
+31,CUST-0031,Aditya Kumar,Corporate
+32,CUST-0032,Ishita Malhotra,Consumer
+33,CUST-0033,Tushar Banerjee,Consumer
+34,CUST-0034,Komal Iyer,Home Office
+35,CUST-0035,Akash Singh,Home Office
+36,CUST-0036,Abhishek Chatterjee,Corporate
+37,CUST-0037,Kavita Das,Consumer
+38,CUST-0038,Akash Deshmukh,Consumer
+39,CUST-0039,Siddharth Malhotra,Corporate
+40,CUST-0040,Ananya Chatterjee,Consumer
+41,CUST-0041,Rohan Bose,Consumer
+42,CUST-0042,Riya Reddy,Consumer
+43,CUST-0043,Ishita Banerjee,Consumer
+44,CUST-0044,Preeti Mehta,Home Office
+45,CUST-0045,Komal Kulkarni,Consumer
+46,CUST-0046,Komal Rao,Corporate
+47,CUST-0047,Kunal Verma,Consumer
+48,CUST-0048,Jyoti Sen,Consumer
+49,CUST-0049,Kunal Nambiar,Consumer
+50,CUST-0050,Deepa Trivedi,Consumer
+51,CUST-0051,Riya Kumar,Home Office
+52,CUST-0052,Arjun Mukherjee,Corporate
+53,CUST-0053,Neha Choudhury,Home Office
+54,CUST-0054,Pooja Verma,Home Office
+55,CUST-0055,Aditya Bose,Consumer
+56,CUST-0056,Deepa Agarwal,Home Office
+57,CUST-0057,Varun Das,Consumer
+58,CUST-0058,Kavita Mukherjee,Consumer
+59,CUST-0059,Prerna Menon,Consumer
+60,CUST-0060,Nisha Nambiar,Consumer
+61,CUST-0061,Nisha Trivedi,Consumer
+62,CUST-0062,Shreya Choudhury,Consumer
+63,CUST-0063,Swati Gupta,Corporate
+64,CUST-0064,Deepa Singh,Consumer
+65,CUST-0065,Aarav Nambiar,Consumer
+66,CUST-0066,Kunal Mukherjee,Consumer
+67,CUST-0067,Divya Mukherjee,Consumer
+68,CUST-0068,Akash Joshi,Corporate
+69,CUST-0069,Akash Mukherjee,Consumer
+70,CUST-0070,Kabir Verma,Home Office
+71,CUST-0071,Aditya Sen,Corporate
+72,CUST-0072,Sunita Banerjee,Consumer
+73,CUST-0073,Vivek Mehta,Consumer
+74,CUST-0074,Priya Gupta,Corporate
+75,CUST-0075,Ritu Chatterjee,Corporate
+76,CUST-0076,Meera Trivedi,Corporate
+77,CUST-0077,Neha Iyer,Corporate
+78,CUST-0078,Simran Saxena,Consumer
+79,CUST-0079,Harsh Choudhury,Consumer
+80,CUST-0080,Arjun Malhotra,Consumer
+81,CUST-0081,Prerna Singh,Home Office
+82,CUST-0082,Sunita Menon,Corporate
+83,CUST-0083,Deepa Nair,Consumer
+84,CUST-0084,Abhishek Deshmukh,Consumer
+85,CUST-0085,Preeti Joshi,Consumer
+86,CUST-0086,Mayank Kapoor,Consumer
+87,CUST-0087,Rajesh Trivedi,Corporate
+88,CUST-0088,Rajesh Gupta,Corporate
+89,CUST-0089,Siddharth Iyer,Home Office
+90,CUST-0090,Priya Pillai,Consumer
+91,CUST-0091,Siddharth Pillai,Consumer
+92,CUST-0092,Aarav Iyer,Corporate
+93,CUST-0093,Akash Patel,Corporate
+94,CUST-0094,Vikram Trivedi,Consumer
+95,CUST-0095,Swati Iyer,Corporate
+96,CUST-0096,Meera Reddy,Consumer
+97,CUST-0097,Simran Nair,Consumer
+98,CUST-0098,Arjun Nambiar,Consumer
+99,CUST-0099,Manish Kulkarni,Consumer
+100,CUST-0100,Nikhil Bose,Consumer
+101,CUST-0101,Kabir Gupta,Consumer
+102,CUST-0102,Mayank Bhat,Corporate
+103,CUST-0103,Deepa Bhat,Consumer
+104,CUST-0104,Abhishek Patel,Consumer
+105,CUST-0105,Komal Kapoor,Home Office
+106,CUST-0106,Ananya Das,Consumer
+107,CUST-0107,Swati Bose,Consumer
+108,CUST-0108,Rahul Chatterjee,Corporate
+109,CUST-0109,Kabir Sen,Consumer
+110,CUST-0110,Arjun Bhat,Consumer
+111,CUST-0111,Shreya Rao,Consumer
+112,CUST-0112,Vikram Rao,Consumer
+113,CUST-0113,Prerna Gupta,Home Office
+114,CUST-0114,Komal Sen,Corporate
+115,CUST-0115,Meera Singh,Corporate
+116,CUST-0116,Simran Kulkarni,Home Office
+117,CUST-0117,Riya Trivedi,Corporate
+118,CUST-0118,Aditya Das,Consumer
+119,CUST-0119,Kavita Joshi,Home Office
+120,CUST-0120,Tushar Nambiar,Consumer
+121,CUST-0121,Prerna Malhotra,Corporate
+122,CUST-0122,Simran Verma,Home Office
+123,CUST-0123,Amit Nair,Consumer
+124,CUST-0124,Pallavi Nambiar,Consumer
+125,CUST-0125,Ananya Nambiar,Consumer
+126,CUST-0126,Ananya Patel,Consumer
+127,CUST-0127,Nikhil Mukherjee,Corporate
+128,CUST-0128,Sunita Singh,Home Office
+129,CUST-0129,Alok Iyer,Consumer
+130,CUST-0130,Divya Iyer,Consumer
+131,CUST-0131,Vikram Malhotra,Consumer
+132,CUST-0132,Meera Das,Consumer
+133,CUST-0133,Manish Chatterjee,Consumer
+134,CUST-0134,Vivek Patel,Consumer
+135,CUST-0135,Neha Bhat,Home Office
+136,CUST-0136,Pallavi Pillai,Consumer
+137,CUST-0137,Sanjay Banerjee,Consumer
+138,CUST-0138,Riya Verma,Corporate
+139,CUST-0139,Komal Joshi,Consumer
+140,CUST-0140,Vikram Sharma,Home Office
+141,CUST-0141,Bhavna Pillai,Home Office
+142,CUST-0142,Vikram Sen,Consumer
+143,CUST-0143,Alok Reddy,Consumer
+144,CUST-0144,Gaurav Trivedi,Consumer
+145,CUST-0145,Meera Kumar,Consumer
+146,CUST-0146,Aditya Rao,Consumer
+147,CUST-0147,Harsh Deshmukh,Corporate
+148,CUST-0148,Bhavna Bose,Consumer
+149,CUST-0149,Sunita Sharma,Consumer
+150,CUST-0150,Prerna Joshi,Consumer
+151,CUST-0151,Rahul Trivedi,Home Office
+152,CUST-0152,Kunal Gupta,Consumer
+153,CUST-0153,Sneha Reddy,Consumer
+154,CUST-0154,Vivek Nair,Consumer
+155,CUST-0155,Swati Nair,Home Office
+156,CUST-0156,Akash Menon,Consumer
+157,CUST-0157,Alok Kulkarni,Corporate
+158,CUST-0158,Ananya Iyer,Corporate
+159,CUST-0159,Deepa Saxena,Consumer
+160,CUST-0160,Rohan Sharma,Corporate
+161,CUST-0161,Arjun Kapoor,Consumer
+162,CUST-0162,Aditya Nambiar,Corporate
+163,CUST-0163,Prerna Deshmukh,Corporate
+164,CUST-0164,Prerna Sharma,Consumer
+165,CUST-0165,Tushar Trivedi,Consumer
+166,CUST-0166,Harsh Patel,Corporate
+167,CUST-0167,Prerna Verma,Consumer
+168,CUST-0168,Arjun Patel,Consumer
+169,CUST-0169,Tanvi Trivedi,Consumer
+170,CUST-0170,Rohan Trivedi,Consumer
+171,CUST-0171,Meera Malhotra,Corporate
+172,CUST-0172,Gaurav Choudhury,Consumer
+173,CUST-0173,Karthik Agarwal,Consumer
+174,CUST-0174,Sneha Banerjee,Consumer
+175,CUST-0175,Divya Trivedi,Corporate
+176,CUST-0176,Priya Singh,Consumer
+177,CUST-0177,Karthik Bose,Corporate
+178,CUST-0178,Jyoti Bose,Consumer
+179,CUST-0179,Shreya Singh,Home Office
+180,CUST-0180,Tushar Gupta,Consumer
+181,CUST-0181,Rohan Menon,Consumer
+182,CUST-0182,Siddharth Nair,Consumer
+183,CUST-0183,Kavita Kumar,Home Office
+184,CUST-0184,Siddharth Chatterjee,Home Office
+185,CUST-0185,Mayank Nair,Consumer
+186,CUST-0186,Vikram Choudhury,Corporate
+187,CUST-0187,Gaurav Kapoor,Corporate
+188,CUST-0188,Riya Malhotra,Consumer
+189,CUST-0189,Harsh Mehta,Consumer
+190,CUST-0190,Pooja Trivedi,Consumer
+191,CUST-0191,Divya Pillai,Consumer
+192,CUST-0192,Rohan Gupta,Home Office
+193,CUST-0193,Deepa Kumar,Home Office
+194,CUST-0194,Sanjay Bhat,Corporate
+195,CUST-0195,Alok Gupta,Consumer
+196,CUST-0196,Manish Nair,Consumer
+197,CUST-0197,Rohan Deshmukh,Corporate
+198,CUST-0198,Aarav Mukherjee,Home Office
+199,CUST-0199,Harsh Malhotra,Home Office
+200,CUST-0200,Jyoti Nambiar,Corporate
+201,CUST-0201,Kabir Kumar,Corporate
+202,CUST-0202,Swati Agarwal,Consumer
+203,CUST-0203,Mayank Menon,Consumer
+204,CUST-0204,Abhishek Trivedi,Home Office
+205,CUST-0205,Alok Joshi,Corporate
+206,CUST-0206,Karthik Mehta,Consumer
+207,CUST-0207,Tushar Joshi,Consumer
+208,CUST-0208,Arjun Nair,Corporate
+209,CUST-0209,Mayank Das,Consumer
+210,CUST-0210,Jyoti Trivedi,Consumer
+211,CUST-0211,Ritu Das,Consumer
+212,CUST-0212,Aarav Joshi,Corporate
+213,CUST-0213,Ishita Bhat,Corporate
+214,CUST-0214,Pallavi Agarwal,Consumer
+215,CUST-0215,Sanjay Rao,Corporate
+216,CUST-0216,Rajesh Malhotra,Consumer
+217,CUST-0217,Jyoti Singh,Consumer
+218,CUST-0218,Neha Joshi,Corporate
+219,CUST-0219,Bhavna Mehta,Corporate
+220,CUST-0220,Priya Patel,Corporate
+221,CUST-0221,Nikhil Agarwal,Corporate
+222,CUST-0222,Karthik Trivedi,Consumer
+223,CUST-0223,Preeti Deshmukh,Consumer
+224,CUST-0224,Simran Das,Consumer
+225,CUST-0225,Sneha Kapoor,Consumer
+226,CUST-0226,Aarav Trivedi,Consumer
+227,CUST-0227,Rahul Choudhury,Home Office
+228,CUST-0228,Siddharth Singh,Consumer
+229,CUST-0229,Tushar Mukherjee,Home Office
+230,CUST-0230,Ananya Sen,Corporate
+231,CUST-0231,Pooja Rao,Corporate
+232,CUST-0232,Kavita Malhotra,Consumer
+233,CUST-0233,Prerna Agarwal,Consumer
+234,CUST-0234,Rajesh Agarwal,Consumer
+235,CUST-0235,Alok Bhat,Consumer
+236,CUST-0236,Prerna Rao,Corporate
+237,CUST-0237,Jyoti Menon,Consumer
+238,CUST-0238,Rajesh Reddy,Consumer
+239,CUST-0239,Meera Saxena,Corporate
+240,CUST-0240,Sunita Kulkarni,Consumer
+241,CUST-0241,Rajesh Iyer,Home Office
+242,CUST-0242,Amit Chatterjee,Home Office
+243,CUST-0243,Swati Mehta,Home Office
+244,CUST-0244,Neha Verma,Consumer
+245,CUST-0245,Siddharth Das,Consumer
+246,CUST-0246,Sneha Deshmukh,Home Office
+247,CUST-0247,Vikram Bhat,Consumer
+248,CUST-0248,Swati Sen,Home Office
+249,CUST-0249,Karthik Patel,Home Office
+250,CUST-0250,Karthik Das,Home Office
+251,CUST-0251,Pallavi Deshmukh,Consumer
+252,CUST-0252,Manish Das,Consumer
+253,CUST-0253,Aarav Kumar,Home Office
+254,CUST-0254,Varun Menon,Consumer
+255,CUST-0255,Karthik Sen,Consumer
+256,CUST-0256,Vivek Trivedi,Consumer
+257,CUST-0257,Simran Chatterjee,Home Office
+258,CUST-0258,Deepa Kulkarni,Corporate
+259,CUST-0259,Varun Mehta,Consumer
+260,CUST-0260,Nisha Bose,Consumer
+261,CUST-0261,Abhishek Singh,Corporate
+262,CUST-0262,Kavita Banerjee,Home Office
+263,CUST-0264,Riya Pillai,Consumer
+264,CUST-0265,Mayank Sharma,Home Office
+265,CUST-0266,Komal Bhat,Corporate
+266,CUST-0267,Kavita Singh,Corporate
+267,CUST-0268,Kunal Das,Corporate
+268,CUST-0269,Ishita Rao,Consumer
+269,CUST-0270,Swati Choudhury,Consumer
+270,CUST-0271,Karthik Reddy,Corporate
+271,CUST-0272,Neha Kulkarni,Corporate
+272,CUST-0273,Ananya Kumar,Home Office
+273,CUST-0274,Komal Patel,Home Office
+274,CUST-0275,Priya Chatterjee,Consumer
+275,CUST-0276,Priya Agarwal,Consumer
+276,CUST-0277,Meera Verma,Corporate
+277,CUST-0278,Mayank Gupta,Corporate
+278,CUST-0279,Tushar Reddy,Corporate
+279,CUST-0280,Tanvi Singh,Corporate
+280,CUST-0281,Vivek Nambiar,Home Office
+281,CUST-0282,Pooja Choudhury,Consumer
+282,CUST-0283,Aditya Joshi,Consumer
+283,CUST-0284,Pallavi Sharma,Consumer
+284,CUST-0285,Manish Malhotra,Consumer
+285,CUST-0286,Riya Deshmukh,Consumer
+286,CUST-0287,Vikram Pillai,Consumer
+287,CUST-0288,Akash Chatterjee,Consumer
+288,CUST-0289,Tushar Choudhury,Consumer
+289,CUST-0290,Nisha Agarwal,Consumer
+290,CUST-0291,Pooja Bose,Consumer
+291,CUST-0292,Rohan Kumar,Consumer
+292,CUST-0293,Deepa Malhotra,Corporate
+293,CUST-0294,Vikram Mukherjee,Consumer
+294,CUST-0295,Swati Sharma,Consumer
+295,CUST-0296,Karthik Saxena,Consumer
+296,CUST-0297,Rahul Bhat,Corporate
+297,CUST-0298,Akash Trivedi,Consumer
+298,CUST-0299,Kavita Deshmukh,Corporate
+299,CUST-0300,Abhishek Mukherjee,Consumer

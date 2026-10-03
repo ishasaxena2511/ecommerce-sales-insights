@@ -1,0 +1,40 @@
+# Environments
+.venv/
+venv/
+env/
+ENV/
+
+# Python cache and bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+
+# Operating System files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Testing & Coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Distribution & Builds
+build/
+dist/
+*.egg-info/
+
+# IDE & Editor settings
+.idea/
+.vscode/
+*.swp
+*.swo
+.venv_publish/
+.env
+.env.*
+!.env.example
